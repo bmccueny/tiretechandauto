@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "Auto Repair Services",
@@ -272,7 +274,13 @@ export default function ServicesPage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
-    </>
-  );
-}
+       </section>
+       
+        {/* Are You Due for Service? */}
+        <ServiceDueSection />
+        
+        {/* Shop For Tires */}
+        <ShopForTires />
+      </>
+    );
+  }

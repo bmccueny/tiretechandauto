@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -162,7 +164,13 @@ export default function ContactPage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
-    </>
-  );
-}
+       </section>
+       
+       {/* Are You Due for Service? */}
+       <ServiceDueSection />
+       
+       {/* Shop For Tires */}
+       <ShopForTires />
+     </>
+   );
+ }

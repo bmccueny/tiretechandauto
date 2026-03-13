@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "Tires",
@@ -185,7 +187,7 @@ export default function TiresPage() {
                 Brands We Carry
               </h2>
               <p className="mt-4 text-gray-400 text-lg">
-                Premium tires from the world's leading manufacturers
+                Premium tires from the world&apos;s leading manufacturers
               </p>
             </div>
           </AnimatedSection>
@@ -205,19 +207,89 @@ export default function TiresPage() {
         </div>
       </section>
 
-      {/* Tire Care Tips */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-navy">
-                Tire Care Tips
-              </h2>
-              <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-                Extend the life of your tires and stay safe on the road with these maintenance tips from our experts.
-              </p>
-            </div>
-          </AnimatedSection>
+       {/* Shop for Tires */}
+       <section className="py-20 bg-gray-light">
+         <div className="max-w-7xl mx-auto px-4">
+           <AnimatedSection>
+             <div className="text-center mb-16">
+               <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-navy">
+                 Find Your Perfect Tires
+               </h2>
+               <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+                 Select your vehicle details to find the perfect tires for your car, truck, or SUV.
+               </p>
+             </div>
+           </AnimatedSection>
+           
+           <div className="bg-white rounded-xl p-8 shadow-sm">
+             <form className="space-y-6">
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                 <div>
+                   <label className="block text-gray-700 font-medium mb-2">Vehicle Make</label>
+                   <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-brand">
+                     <option value="">Select Make</option>
+                     <option value="toyota">Toyota</option>
+                     <option value="honda">Honda</option>
+                     <option value="ford">Ford</option>
+                     <option value="chevrolet">Chevrolet</option>
+                     <option value="nissan">Nissan</option>
+                     <option value="bmw">BMW</option>
+                     <option value="mercedes">Mercedes-Benz</option>
+                     <option value="audi">Audi</option>
+                   </select>
+                 </div>
+                 <div>
+                   <label className="block text-gray-700 font-medium mb-2">Vehicle Model</label>
+                   <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-brand">
+                     <option value="">Select Model</option>
+                     <option value="camry">Camry</option>
+                     <option value="civic">Civic</option>
+                     <option value="f-150">F-150</option>
+                     <option value="silverado">Silverado</option>
+                     <option value="altima">Altima</option>
+                     <option value="3-series">3 Series</option>
+                     <option value="c-class">C-Class</option>
+                     <option value="a4">A4</option>
+                   </select>
+                 </div>
+                 <div>
+                   <label className="block text-gray-700 font-medium mb-2">Year</label>
+                   <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-brand">
+                     <option value="">Select Year</option>
+                     <option value="2024">2024</option>
+                     <option value="2023">2023</option>
+                     <option value="2022">2022</option>
+                     <option value="2021">2021</option>
+                     <option value="2020">2020</option>
+                     <option value="2019">2019</option>
+                     <option value="2018">2018</option>
+                     <option value="2017">2017</option>
+                   </select>
+                 </div>
+               </div>
+               <div className="flex justify-center">
+                 <button type="submit" className="bg-red-brand hover:bg-red-brand-light text-white font-bold py-3 px-8 rounded-lg transition-colors hover:scale-105">
+                   Find My Tires
+                 </button>
+               </div>
+             </form>
+           </div>
+         </div>
+       </section>
+       
+       {/* Tire Care Tips */}
+       <section className="py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4">
+           <AnimatedSection>
+             <div className="text-center mb-16">
+               <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-navy">
+                 Tire Care Tips
+               </h2>
+               <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+                 Extend the life of your tires and stay safe on the road with these maintenance tips from our experts.
+               </p>
+             </div>
+           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tireTips.map((tip, i) => (
@@ -264,6 +336,12 @@ export default function TiresPage() {
           </AnimatedSection>
         </div>
       </section>
+      
+      {/* Are You Due for Service? */}
+      <ServiceDueSection />
+      
+      {/* Shop For Tires */}
+      <ShopForTires />
     </>
   );
 }

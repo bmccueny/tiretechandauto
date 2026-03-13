@@ -1,6 +1,8 @@
 import Link from "next/link";
-import HeroSection from "@/components/HeroSection";
+import HeroVideoSection from "@/components/HeroVideoSection";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 const services = [
   {
@@ -100,8 +102,8 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <HeroSection />
+      {/* Hero Video */}
+      <HeroVideoSection />
 
       {/* Featured Services */}
       <section className="py-20 bg-white">
@@ -160,7 +162,7 @@ export default function Home() {
                 Top Tire Brands
               </h2>
               <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                We carry over 25,000 tires from the world's most trusted manufacturers.
+                We carry over 25,000 tires from the world&apos;s most trusted manufacturers.
               </p>
             </div>
           </AnimatedSection>
@@ -262,84 +264,90 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Locations */}
-      <section className="py-20 bg-navy">
-        <div className="max-w-7xl mx-auto px-4">
-          <AnimatedSection>
-            <div className="text-center mb-12">
-              <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-white">
-                Our Locations
-              </h2>
-            </div>
-          </AnimatedSection>
+       {/* Locations */}
+       <section className="py-20 bg-navy">
+         <div className="max-w-7xl mx-auto px-4">
+           <AnimatedSection>
+             <div className="text-center mb-12">
+               <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-white">
+                 Our Locations
+               </h2>
+             </div>
+           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection delay={0.1}>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-red-brand rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-[var(--font-oswald)] text-2xl font-bold text-white">
-                    Retail Location
-                  </h3>
-                </div>
-                <p className="text-gray-300">357 Ramapo Valley Rd</p>
-                <p className="text-gray-300">Oakland, NJ 07436</p>
-                <a href="tel:2013370016" className="text-steel hover:text-white transition-colors font-semibold mt-2 inline-block">
-                  (201) 337-0016
-                </a>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <p className="text-gray-400 text-sm">Mon-Fri: 8:00 AM to 6:00 PM</p>
-                  <p className="text-gray-400 text-sm">Sat: 7:00 AM to 5:00 PM</p>
-                  <p className="text-gray-400 text-sm">Sun: Closed</p>
-                </div>
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-block bg-red-brand hover:bg-red-brand-light text-white font-bold py-2.5 px-6 rounded-lg transition-colors text-sm"
-                >
-                  Get Directions
-                </Link>
-              </div>
-            </AnimatedSection>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             <AnimatedSection delay={0.1}>
+               <div className="bg-white/5 border border-white/10 rounded-xl p-8 hover-bg-white/10 transition-colors">
+                 <div className="flex items-center gap-3 mb-4">
+                   <div className="w-10 h-10 bg-red-brand rounded-lg flex items-center justify-center">
+                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                     </svg>
+                   </div>
+                   <h3 className="font-[var(--font-oswald)] text-2xl font-bold text-white">
+                     Retail Location
+                   </h3>
+                 </div>
+                 <p className="text-gray-300">357 Ramapo Valley Rd</p>
+                 <p className="text-gray-300">Oakland, NJ 07436</p>
+                 <a href="tel:2013370016" className="text-steel hover:text-white transition-colors font-semibold mt-2 inline-block">
+                   (201) 337-0016
+                 </a>
+                 <div className="mt-4 pt-4 border-t border-white/10">
+                   <p className="text-gray-400 text-sm">Mon-Fri: 8:00 AM to 6:00 PM</p>
+                   <p className="text-gray-400 text-sm">Sat: 7:00 AM to 5:00 PM</p>
+                   <p className="text-gray-400 text-sm">Sun: Closed</p>
+                 </div>
+                 <Link
+                   href="/contact"
+                   className="mt-6 inline-block bg-red-brand hover:bg-red-brand-light text-white font-bold py-2.5 px-6 rounded-lg transition-colors text-sm"
+                 >
+                   Get Directions
+                 </Link>
+               </div>
+             </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-steel rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-[var(--font-oswald)] text-2xl font-bold text-white">
-                    Commercial Truck Location
-                  </h3>
-                </div>
-                <p className="text-gray-300">56 Spruce Street</p>
-                <p className="text-gray-300">Oakland, NJ 07436</p>
-                <a href="tel:2016440800" className="text-steel hover:text-white transition-colors font-semibold mt-2 inline-block">
-                  (201) 644-0800
-                </a>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <p className="text-gray-400 text-sm">Mon-Fri: 8:00 AM to 6:00 PM</p>
-                  <p className="text-gray-400 text-sm">Sat: 7:00 AM to 5:00 PM</p>
-                  <p className="text-gray-400 text-sm">Sun: Closed</p>
-                </div>
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-block bg-steel hover:bg-blue-400 text-white font-bold py-2.5 px-6 rounded-lg transition-colors text-sm"
-                >
-                  Get Directions
-                </Link>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+             <AnimatedSection delay={0.2}>
+               <div className="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-colors">
+                 <div className="flex items-center gap-3 mb-4">
+                   <div className="w-10 h-10 bg-steel rounded-lg flex items-center justify-center">
+                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                     </svg>
+                   </div>
+                   <h3 className="font-[var(--font-oswald)] text-2xl font-bold text-white">
+                     Commercial Truck Location
+                   </h3>
+                 </div>
+                 <p className="text-gray-300">56 Spruce Street</p>
+                 <p className="text-gray-300">Oakland, NJ 07436</p>
+                 <a href="tel:2016440800" className="text-steel hover:text-white transition-colors font-semibold mt-2 inline-block">
+                   (201) 644-0800
+                 </a>
+                 <div className="mt-4 pt-4 border-t border-white/10">
+                   <p className="text-gray-400 text-sm">Mon-Fri: 8:00 AM to 6:00 PM</p>
+                   <p className="text-gray-400 text-sm">Sat: 7:00 AM to 5:00 PM</p>
+                   <p className="text-gray-400 text-sm">Sun: Closed</p>
+                 </div>
+                 <Link
+                   href="/contact"
+                   className="mt-6 inline-block bg-steel hover:bg-blue-400 text-white font-bold py-2.5 px-6 rounded-lg transition-colors text-sm"
+                 >
+                   Get Directions
+                 </Link>
+               </div>
+             </AnimatedSection>
+           </div>
+         </div>
+       </section>
+       
+        {/* Are You Due for Service? */}
+        <ServiceDueSection />
+
+        {/* Shop For Tires Section */}
+        <ShopForTires />
+      </>
+    );
+  }

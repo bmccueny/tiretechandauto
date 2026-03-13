@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -173,10 +175,10 @@ export default function AboutPage() {
               </svg>
             </div>
             <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-white">
-              Grace's Gladiators
+              Grace&apos;s Gladiators
             </h2>
             <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-              Tire Tech and Auto Repair Centers is a proud supporter of Grace's Gladiators, a team
+              Tire Tech and Auto Repair Centers is a proud supporter of Grace&apos;s Gladiators, a team
               dedicated to raising funds and awareness for the Juvenile Diabetes Research Foundation
               (JDRF). This cause holds a special place in the hearts of our team, and we are
               committed to supporting the fight for a cure for Type 1 Diabetes. Community is more
@@ -202,7 +204,7 @@ export default function AboutPage() {
                   Tire Tech and Auto Repair Centers is a AAA Approved Auto Repair facility. This
                   means we meet the highest standards for quality, customer satisfaction, and
                   professional competency. AAA inspects our facility, reviews customer feedback, and
-                  verifies our technicians' qualifications. When you see the AAA badge, you can be
+                  verifies our technicians&apos; qualifications. When you see the AAA badge, you can be
                   confident you are in good hands.
                 </p>
               </div>
@@ -211,33 +213,39 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-red-brand">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <AnimatedSection>
-            <h2 className="font-[var(--font-oswald)] text-4xl font-bold text-white">
-              Experience the Tire Tech Difference
-            </h2>
-            <p className="mt-4 text-red-100 text-lg">
-              Visit us today and see why thousands of Northern NJ drivers trust us with their vehicles.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-red-brand hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/services"
-                className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg transition-colors border border-white/30"
-              >
-                Our Services
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-    </>
-  );
-}
+       {/* CTA */}
+       <section className="py-16 bg-red-brand">
+         <div className="max-w-4xl mx-auto px-4 text-center">
+           <AnimatedSection>
+             <h2 className="font-[var(--font-oswald)] text-4xl font-bold text-white">
+               Experience the Tire Tech Difference
+             </h2>
+             <p className="mt-4 text-red-100 text-lg">
+               Visit us today and see why thousands of Northern NJ drivers trust us with their vehicles.
+             </p>
+             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+               <Link
+                 href="/contact"
+                 className="bg-white text-red-brand hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors"
+               >
+                 Contact Us
+               </Link>
+               <Link
+                 href="/services"
+                 className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg transition-colors border border-white/30"
+               >
+                 Our Services
+               </Link>
+             </div>
+           </AnimatedSection>
+         </div>
+       </section>
+       
+        {/* Are You Due for Service? */}
+        <ServiceDueSection />
+        
+        {/* Shop For Tires */}
+        <ShopForTires />
+      </>
+    );
+  }

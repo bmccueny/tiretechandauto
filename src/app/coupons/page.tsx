@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "Coupons & Specials",
@@ -181,7 +183,13 @@ export default function CouponsPage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
-    </>
-  );
-}
+       </section>
+       
+        {/* Are You Due for Service? */}
+        <ServiceDueSection />
+        
+        {/* Shop For Tires */}
+        <ShopForTires />
+      </>
+    );
+  }

@@ -47,5 +47,99 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    // Tires Subpages
+    {
+      url: `${baseUrl}/tires/care-tips`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tires/atv`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tires/commercial`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tires/lawn-garden`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tires/trailer`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Services Subpages
+    {
+      url: `${baseUrl}/services/schedule`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/car-care-tips`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services/maintenance-adviser`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services/emergency-road`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services/commercial`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services/mobile`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // About Subpages
+    {
+      url: `${baseUrl}/about/news`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/about/photo-gallery`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/about/reviews`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    // Contact Subpages
+    {
+      url: `${baseUrl}/contact/find-us`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

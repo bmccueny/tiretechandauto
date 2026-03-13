@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ServiceDueSection from "@/components/ServiceDueSection";
+import ShopForTires from "@/components/ShopForTires";
 
 export const metadata: Metadata = {
   title: "Financing",
@@ -91,20 +94,32 @@ export default function FinancingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection>
             <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/3 flex justify-center">
-                <div className="w-64 h-40 bg-gradient-to-br from-navy to-navy-light rounded-2xl flex items-center justify-center shadow-lg">
-                  <div className="text-center">
-                    <p className="font-[var(--font-oswald)] text-2xl font-bold text-white">
-                      Firestone
-                    </p>
-                    <p className="text-gray-400 text-sm mt-1">Credit Card</p>
-                    <div className="mt-4 flex gap-1 justify-center">
-                      <div className="w-8 h-5 bg-red-brand rounded-sm" />
-                      <div className="w-8 h-5 bg-steel rounded-sm" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+               <div className="w-full md:w-1/3 flex justify-center">
+                 <div className="w-64 h-40 bg-gradient-to-br from-navy to-navy-light rounded-2xl flex items-center justify-center shadow-lg">
+                   <div className="text-center">
+                     <p className="font-[var(--font-oswald)] text-2xl font-bold text-white">
+                       Firestone
+                     </p>
+                     <p className="text-gray-400 text-sm mt-1">Credit Card</p>
+                     <div className="mt-4 flex gap-1 justify-center">
+                       <Image
+                         src="/images/financing/firestone-logo.png"
+                         alt="Firestone Logo"
+                         width={40}
+                         height={20}
+                         priority
+                       />
+                       <Image
+                         src="/images/financing/firestone-credit-card.png"
+                         alt="Firestone Credit Card"
+                         width={80}
+                         height={40}
+                         priority
+                       />
+                     </div>
+                   </div>
+                 </div>
+               </div>
               <div className="w-full md:w-2/3">
                 <h3 className="font-[var(--font-oswald)] text-3xl font-bold text-navy">
                   Bridgestone / Firestone Credit Card
@@ -207,6 +222,12 @@ export default function FinancingPage() {
           </AnimatedSection>
         </div>
       </section>
+      
+      {/* Are You Due for Service? */}
+      <ServiceDueSection />
+      
+      {/* Shop For Tires */}
+      <ShopForTires />
     </>
   );
 }
